@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>{{student.id ? 'Edit' : 'Add'}} Student</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="student.name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="student.email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Major</mat-label>
+    <mat-select [(ngModel)]="student.major">
+      <mat-option value="Computer Science">Computer Science</mat-option>
+      <mat-option value="Information Systems">Information Systems</mat-option>
+      <mat-option value="Business Analyst">Business Analyst</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

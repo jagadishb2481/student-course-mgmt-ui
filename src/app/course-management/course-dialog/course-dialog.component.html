@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>{{ data.id ? 'Edit Course' : 'Add Course' }}</h2>
+<form>
+  <mat-form-field>
+    <mat-label>Course Name</mat-label>
+    <input matInput [(ngModel)]="data.courseName" name="courseName" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="data.description" name="description" required></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Schedule</mat-label>
+    <input matInput [(ngModel)]="data.schedule" name="schedule" required>
+  </mat-form-field>
+
+  <div>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="onSubmit()" cdkFocusInitial>Save</button>
+  </div>
+</form>

@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Enrolled Courses</h1>
+
+<div mat-dialog-content>
+  <mat-list>
+    <mat-list-item *ngFor="let course of enrolledCourses">
+      {{ course.courseName }} - {{ course.schedule }}
+      <button mat-icon-button color="warn" (click)="deleteEnrollment(course.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>Close</button>
+  </div>
